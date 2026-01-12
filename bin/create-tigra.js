@@ -218,8 +218,16 @@ program
             // Filter function to exclude unwanted files/folders
             const filterFunc = (src) => {
                 const relativePath = path.relative(templateDir, src);
+                const basename = path.basename(src);
+
                 // Always include the root
                 if (!relativePath) return true;
+
+                // Special case: exclude .env but NOT .env.example
+                if (basename === '.env' && !src.endsWith('.env.example')) {
+                    return false;
+                }
+
                 // Check against exclude patterns
                 return !excludePatterns.some(
                     (pattern) =>
