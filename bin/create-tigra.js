@@ -223,8 +223,13 @@ program
                 // Always include the root
                 if (!relativePath) return true;
 
-                // Special case: exclude .env but NOT .env.example
-                if (basename === '.env' && !src.endsWith('.env.example')) {
+                // Special case: ALWAYS include .env.example
+                if (basename === '.env.example') {
+                    return true;
+                }
+
+                // Special case: exclude .env (but not .env.example which was already handled)
+                if (basename === '.env') {
                     return false;
                 }
 
