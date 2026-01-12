@@ -1,6 +1,6 @@
 import { FastifyInstance } from 'fastify';
-import { prisma } from '@/libs/db';
-import { redis } from '@/libs/redis';
+import { prisma } from '../libs/db.js';
+import { redis } from '../libs/redis.js';
 
 export async function healthRoutes(app: FastifyInstance) {
     app.get('/health', async (request, reply) => {

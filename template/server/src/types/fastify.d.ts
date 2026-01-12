@@ -1,6 +1,6 @@
 import { FastifyReply, FastifyRequest } from 'fastify';
-import { JwtPayload } from '@/modules/auth/auth.types';
-import { UserRole } from '@/libs/auth/rbac.middleware';
+import { JwtPayload } from '../modules/auth/auth.types.js';
+import { UserRole } from '../libs/auth/rbac.middleware.js';
 
 /**
  * TypeScript Declaration Merging

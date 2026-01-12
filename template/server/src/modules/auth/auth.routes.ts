@@ -8,7 +8,7 @@
  */
 
 import type { FastifyInstance } from 'fastify';
-import * as authController from './auth.controller';
+import * as authController from './auth.controller.js';
 
 /**
  * Register authentication routes

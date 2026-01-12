@@ -9,17 +9,17 @@
  */
 
 import type { FastifyRequest, FastifyReply } from 'fastify';
-import { successResponse } from '@/utils/response';
-import { NotFoundError } from '@/utils/errors';
+import { successResponse } from '../../utils/response.js';
+import { NotFoundError } from '../../utils/errors.js';
 
-import * as authService from './auth.service';
-import * as authRepo from './auth.repo';
+import * as authService from './auth.service.js';
+import * as authRepo from './auth.repo.js';
 import {
     RegisterSchema,
     LoginSchema,
     RefreshTokenSchema,
-} from './auth.schemas';
-import type { RegisterInput, LoginInput, RefreshTokenInput } from './auth.schemas';
+} from './auth.schemas.js';
+import type { RegisterInput, LoginInput, RefreshTokenInput } from './auth.schemas.js';
 
 /**
  * Register a new user

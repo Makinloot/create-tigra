@@ -7,11 +7,11 @@
  * @see /mnt/project/02-general-rules.md
  */
 
-import logger from '@/libs/logger';
-import { NotFoundError, ForbiddenError } from '@/utils/errors';
-import * as resourceRepo from './resources.repo';
-import type { ResourceFilters, Resource, ResourceWithOwner } from './resources.types';
-import type { CreateResourceInput, UpdateResourceInput } from './resources.schemas';
+import logger from '../../libs/logger.js';
+import { NotFoundError, ForbiddenError } from '../../utils/errors.js';
+import * as resourceRepo from './resources.repo.js';
+import type { ResourceFilters, Resource, ResourceWithOwner } from './resources.types.js';
+import type { CreateResourceInput, UpdateResourceInput } from './resources.schemas.js';
 
 /**
  * Service response for paginated data

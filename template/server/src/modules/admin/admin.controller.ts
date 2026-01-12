@@ -4,10 +4,10 @@
  */
 
 import type { FastifyRequest, FastifyReply } from 'fastify';
-import { successResponse, paginatedResponse } from '@/utils/response';
-import { BadRequestError } from '@/utils/errors';
-import * as adminService from './admin.service';
-import type { ListUsersInput, UserIdInput, ChangeRoleInput } from './admin.schemas';
+import { successResponse, paginatedResponse } from '../../utils/response.js';
+import { BadRequestError } from '../../utils/errors.js';
+import * as adminService from './admin.service.js';
+import type { ListUsersInput, UserIdInput, ChangeRoleInput } from './admin.schemas.js';
 
 /**
  * GET /admin/users

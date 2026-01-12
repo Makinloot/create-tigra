@@ -7,8 +7,8 @@
  */
 
 import { Queue } from 'bullmq';
-import { redis } from './redis';
-import logger from './logger';
+import { redis } from './redis.js';
+import logger from './logger.js';
 
 /**
  * File Processing Queue

@@ -11,27 +11,27 @@
  */
 
 import fastify from 'fastify';
-import { env } from '@/config/env';
-import logger from '@/libs/logger';
+import { env } from './config/env.js';
+import logger from './libs/logger.js';
 
 // Extracted Modules
-import { setupErrorHandler } from '@/libs/error-handler';
-import { registerSecurityPlugins } from '@/plugins/security.plugin';
-import { registerRateLimit } from '@/plugins/rate-limit.plugin';
-import { registerRequestHooks } from '@/hooks/request-timing.hook';
-import { authenticateMiddleware } from '@/libs/auth/authenticate.middleware';
-import { healthRoutes } from '@/routes/health.routes';
+import { setupErrorHandler } from './libs/error-handler.js';
+import { registerSecurityPlugins } from './plugins/security.plugin.js';
+import { registerRateLimit } from './plugins/rate-limit.plugin.js';
+import { registerRequestHooks } from './hooks/request-timing.hook.js';
+import { authenticateMiddleware } from './libs/auth/authenticate.middleware.js';
+import { healthRoutes } from './routes/health.routes.js';
 
 // Routes & RBAC
-import { authRoutes } from '@/modules/auth/auth.routes';
-import { resourceRoutes } from '@/modules/resources/resources.routes';
-import { adminRoutes } from '@/modules/admin/admin.routes';
+import { authRoutes } from './modules/auth/auth.routes.js';
+import { resourceRoutes } from './modules/resources/resources.routes.js';
+import { adminRoutes } from './modules/admin/admin.routes.js';
 import {
     requireRole,
     requireAdmin,
     requireUser,
     requireAny,
-} from '@/libs/auth/rbac.middleware';
+} from './libs/auth/rbac.middleware.js';
 
 /**
  * Configure and build the Fastify application

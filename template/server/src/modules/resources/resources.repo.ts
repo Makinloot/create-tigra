@@ -7,10 +7,10 @@
  * @see /mnt/project/02-general-rules.md
  */
 
-import { prisma } from '@/libs/db';
+import { prisma } from '../../libs/db.js';
 import type { Resource as PrismaResource } from '@prisma/client';
-import type { ResourceFilters, Resource, ResourceWithOwner } from './resources.types';
-import type { CreateResourceInput, UpdateResourceInput } from './resources.schemas';
+import type { ResourceFilters, Resource, ResourceWithOwner } from './resources.types.js';
+import type { CreateResourceInput, UpdateResourceInput } from './resources.schemas.js';
 
 /**
  * Find many resources with filters and pagination

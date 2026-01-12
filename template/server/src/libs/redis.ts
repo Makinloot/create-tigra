@@ -7,7 +7,7 @@
  */
 
 import Redis from 'ioredis';
-import logger from './logger';
+import logger from './logger.js';
 
 /**
  * Create Redis client instance

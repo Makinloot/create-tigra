@@ -1,6 +1,6 @@
 import { FastifyReply, FastifyRequest } from 'fastify';
-import { verifyAccessToken } from '@/modules/auth/auth.service';
-import { UnauthorizedError, AppError } from '@/utils/errors';
+import { verifyAccessToken } from '../../modules/auth/auth.service.js';
+import { UnauthorizedError, AppError } from '../../utils/errors.js';
 
 export async function authenticateMiddleware(request: FastifyRequest, reply: FastifyReply) {
     try {

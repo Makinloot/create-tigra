@@ -8,7 +8,7 @@
  */
 
 import type { FastifyInstance } from 'fastify';
-import * as resourceController from './resources.controller';
+import * as resourceController from './resources.controller.js';
 
 /**
  * Register resources routes

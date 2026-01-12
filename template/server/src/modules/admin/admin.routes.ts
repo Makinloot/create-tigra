@@ -1,5 +1,5 @@
 import { FastifyInstance } from 'fastify';
-import * as adminController from './admin.controller';
+import * as adminController from './admin.controller.js';
 
 /**
  * Admin Routes

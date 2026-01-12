@@ -1,5 +1,5 @@
 import { FastifyInstance } from 'fastify';
-import { env } from '@/config/env';
+import { env } from '../config/env.js';
 
 export function registerRequestHooks(app: FastifyInstance) {
     app.addHook('onRequest', async (request) => {

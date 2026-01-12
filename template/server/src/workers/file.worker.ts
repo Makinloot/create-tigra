@@ -8,8 +8,8 @@
  */
 
 import { Worker, Job } from 'bullmq';
-import { redis } from '@/libs/redis';
-import logger from '@/libs/logger';
+import { redis } from '../libs/redis.js';
+import logger from '../libs/logger.js';
 
 
 /**

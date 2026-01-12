@@ -8,7 +8,7 @@
  */
 
 import type { FastifyRequest, FastifyReply } from 'fastify';
-import { ForbiddenError, UnauthorizedError } from '@/utils/errors';
+import { ForbiddenError, UnauthorizedError } from '../../utils/errors.js';
 
 /**
  * User Role Type

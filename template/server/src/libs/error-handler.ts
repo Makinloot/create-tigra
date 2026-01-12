@@ -2,8 +2,8 @@ import { FastifyError, FastifyReply, FastifyRequest } from 'fastify';
 import { ZodError } from 'zod';
 import { Prisma } from '@prisma/client';
 import jsonwebtoken from 'jsonwebtoken';
-import { env } from '@/config/env';
-import { AppError, InternalError } from '@/utils/errors';
+import { env } from '../config/env.js';
+import { AppError, InternalError } from '../utils/errors.js';
 
 export function setupErrorHandler(error: FastifyError, request: FastifyRequest, reply: FastifyReply) {
     // 1. Log the error internally

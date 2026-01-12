@@ -9,11 +9,11 @@
 
 import 'dotenv/config';
 import buildApp from './app.js';
-import { env } from '@/config/env';
-import logger from '@/libs/logger';
-import { prisma } from '@/libs/db';
-import { redis } from '@/libs/redis';
-import { fileQueue } from '@/libs/queue';
+import { env } from './config/env.js';
+import logger from './libs/logger.js';
+import { prisma } from './libs/db.js';
+import { redis } from './libs/redis.js';
+import { fileQueue } from './libs/queue.js';
 
 /**
  * Start the Fastify server

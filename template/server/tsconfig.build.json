@@ -2,29 +2,29 @@
     "compilerOptions": {
         "target": "ES2022",
         "module": "ES2022",
-        "lib": ["ES2022"],
+        "lib": [
+            "ES2022"
+        ],
         "outDir": "./dist",
         "rootDir": "./src",
         "removeComments": true,
         "strict": false,
         "skipLibCheck": true,
-        "moduleResolution": "bundler",
+        "moduleResolution": "node",
         "esModuleInterop": true,
         "resolveJsonModule": true,
         "declaration": false,
         "sourceMap": false,
         "incremental": true,
-        "types": [],
-        "baseUrl": ".",
-        "paths": {
-            "@/*": ["src/*"],
-            "@/config/*": ["src/config/*"],
-            "@/libs/*": ["src/libs/*"],
-            "@/modules/*": ["src/modules/*"],
-            "@/utils/*": ["src/utils/*"],
-            "@/types/*": ["src/types/*"]
-        }
+        "types": []
     },
-    "include": ["src/**/*.ts"],
-    "exclude": ["node_modules", "dist", "**/*.test.ts", "**/*.spec.ts"]
+    "include": [
+        "src/**/*.ts"
+    ],
+    "exclude": [
+        "node_modules",
+        "dist",
+        "**/*.test.ts",
+        "**/*.spec.ts"
+    ]
 }

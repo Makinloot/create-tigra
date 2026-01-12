@@ -9,20 +9,20 @@
 
 import bcrypt from 'bcryptjs';
 import jwt from 'jsonwebtoken';
-import { env } from '@/config/env';
-import logger from '@/libs/logger';
+import { env } from '../../config/env.js';
+import logger from '../../libs/logger.js';
 import {
     ConflictError,
     UnauthorizedError,
-} from '@/utils/errors';
-import * as authRepo from './auth.repo';
+} from '../../utils/errors.js';
+import * as authRepo from './auth.repo.js';
 import type {
     AuthResponse,
     TokenResponse,
     JwtPayload,
     JwtRefreshPayload,
-} from './auth.types';
-import type { RegisterInput, LoginInput } from './auth.schemas';
+} from './auth.types.js';
+import type { RegisterInput, LoginInput } from './auth.schemas.js';
 
 /**
  * Password hashing rounds

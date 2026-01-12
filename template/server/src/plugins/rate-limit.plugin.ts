@@ -1,7 +1,7 @@
 import { FastifyInstance } from 'fastify';
 import rateLimit from '@fastify/rate-limit';
-import { redis } from '@/libs/redis';
-import { env } from '@/config/env';
+import { redis } from '../libs/redis.js';
+import { env } from '../config/env.js';
 
 export async function registerRateLimit(app: FastifyInstance) {
     await app.register(rateLimit, {

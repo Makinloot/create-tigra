@@ -8,7 +8,7 @@
  */
 
 import { PrismaClient, Prisma } from '@prisma/client';
-import logger from './logger';
+import logger from './logger.js';
 
 /**
  * Create Prisma Client instance

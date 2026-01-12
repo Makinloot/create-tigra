@@ -10,21 +10,21 @@
  */
 
 import type { FastifyRequest, FastifyReply } from 'fastify';
-import { successResponse } from '@/utils/response';
-import { paginatedResponse } from '@/utils/pagination';
-import * as resourceService from './resources.service';
+import { successResponse } from '../../utils/response.js';
+import { paginatedResponse } from '../../utils/pagination.js';
+import * as resourceService from './resources.service.js';
 import {
     CreateResourceSchema,
     UpdateResourceSchema,
     ResourceFiltersSchema,
     PaginationSchema,
-} from './resources.schemas';
+} from './resources.schemas.js';
 import type {
     CreateResourceInput,
     UpdateResourceInput,
     ResourceFiltersInput,
     PaginationInput,
-} from './resources.schemas';
+} from './resources.schemas.js';
 
 /**
  * List resources with filters and pagination

@@ -7,9 +7,9 @@
  * @see /mnt/project/02-general-rules.md
  */
 
-import { prisma } from '@/libs/db';
+import { prisma } from '../../libs/db.js';
 import type { User as PrismaUser, Session as PrismaSession } from '@prisma/client';
-import type { User } from './auth.types';
+import type { User } from './auth.types.js';
 
 /**
  * User with password (internal use only)

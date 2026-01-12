@@ -3,9 +3,9 @@
  * Business logic for admin operations
  */
 
-import { prisma } from '@/libs/db';
-import { NotFoundError, BadRequestError } from '@/utils/errors';
-import logger from '@/libs/logger';
+import { prisma } from '../../libs/db.js';
+import { NotFoundError, BadRequestError } from '../../utils/errors.js';
+import logger from '../../libs/logger.js';
 import type { UserRole } from '@prisma/client';
 
 /**

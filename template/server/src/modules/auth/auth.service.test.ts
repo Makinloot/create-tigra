@@ -3,8 +3,8 @@ import * as authService from './auth.service';
 import * as authRepo from './auth.repo';
 import bcrypt from 'bcryptjs';
 import jwt from 'jsonwebtoken';
-import { env } from '@/config/env';
-import { ConflictError, UnauthorizedError } from '@/utils/errors';
+import { env } from '../../config/env.js';
+import { ConflictError, UnauthorizedError } from '../../utils/errors.js';
 
 // Mock dependencies
 vi.mock('./auth.repo');

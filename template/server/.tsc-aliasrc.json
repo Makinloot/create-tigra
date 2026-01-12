@@ -1,6 +1,7 @@
 {
-  "verbose": false,
+  "verbose": true,
   "resolveFullPaths": true,
+  "resolveFullExtension": ".js",
   "replacers": {
     "before": [],
     "after": []
