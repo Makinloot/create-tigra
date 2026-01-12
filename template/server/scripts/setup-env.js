@@ -2,15 +2,20 @@
 
 /**
  * Setup environment file
- * Copies example.env to .env if .env doesn't exist
+ * Copies .env.example to .env if .env doesn't exist
  */
 
-const fs = require('fs');
-const path = require('path');
+import fs from 'fs';
+import path from 'path';
+import { fileURLToPath } from 'url';
+import { dirname } from 'path';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 
 const ROOT_DIR = path.resolve(__dirname, '..');
 const ENV_FILE = path.join(ROOT_DIR, '.env');
-const EXAMPLE_ENV_FILE = path.join(ROOT_DIR, 'example.env');
+const EXAMPLE_ENV_FILE = path.join(ROOT_DIR, '.env.example');
 
 function setupEnv() {
   // Check if .env already exists
@@ -19,17 +24,17 @@ function setupEnv() {
     return;
   }
 
-  // Check if example.env exists
+  // Check if .env.example exists
   if (!fs.existsSync(EXAMPLE_ENV_FILE)) {
-    console.error('✗ example.env file not found!');
-    console.error('  Please create an example.env file first');
+    console.error('✗ .env.example file not found!');
+    console.error('  Please create a .env.example file first');
     process.exit(1);
   }
 
-  // Copy example.env to .env
+  // Copy .env.example to .env
   try {
     fs.copyFileSync(EXAMPLE_ENV_FILE, ENV_FILE);
-    console.log('✓ Created .env file from example.env');
+    console.log('✓ Created .env file from .env.example');
     console.log('');
     console.log('⚠ IMPORTANT: Please update the following values in .env:');
     console.log('  - DATABASE_URL (replace {{DATABASE_PASSWORD}} and {{DATABASE_NAME}})');

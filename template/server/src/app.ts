@@ -7,7 +7,6 @@
  * @see /mnt/project/02-general-rules.md
  * @see /mnt/project/06-response-handling.md
  * @see /mnt/project/08-observability.md
- * @see /mnt/project/09-api-documentation-v2.md
  * @see /mnt/project/11-rate-limiting-v2.md
  */
 
@@ -19,7 +18,6 @@ import logger from '@/libs/logger';
 import { setupErrorHandler } from '@/libs/error-handler';
 import { registerSecurityPlugins } from '@/plugins/security.plugin';
 import { registerRateLimit } from '@/plugins/rate-limit.plugin';
-import { registerSwagger } from '@/plugins/swagger.plugin';
 import { registerRequestHooks } from '@/hooks/request-timing.hook';
 import { authenticateMiddleware } from '@/libs/auth/authenticate.middleware';
 import { healthRoutes } from '@/routes/health.routes';
@@ -47,7 +45,6 @@ const buildApp = async () => {
     // 1. Plugins
     await registerSecurityPlugins(app);
     await registerRateLimit(app);
-    await registerSwagger(app);
 
     // 2. Decorators
     app.decorate('authenticate', authenticateMiddleware);

@@ -9,7 +9,6 @@
 - Pagination with filters
 - Rate limiting with Redis
 - Background job processing (BullMQ)
-- API documentation (Swagger/OpenAPI)
 - Comprehensive error handling
 - Request logging and monitoring
 - Health checks
@@ -22,7 +21,6 @@
 - **Validation**: Zod
 - **Authentication**: JWT (jsonwebtoken)
 - **Testing**: Vitest + Supertest
-- **Documentation**: Swagger/OpenAPI 3.0
 
 ## Prerequisites
 - Node.js 20 or higher
@@ -35,33 +33,43 @@
 # 1. Install dependencies
 npm install
 
-# 2. Copy environment variables
-cp .env.example .env
-# Edit .env and set required variables (DATABASE_URL, JWT_SECRET, etc.)
-
-# 3. Start Docker services (MySQL + Redis)
+# 2. Start Docker services (MySQL + Redis)
 docker-compose up -d
 
-# 4. Generate Prisma Client
-npm run prisma:generate
+# 3. Initialize database (creates .env, waits for DB, runs migrations)
+npm run db:init
 
-# 5. Run database migrations
-npx prisma migrate dev --name init
-
-# 6. Seed the database
+# 4. Seed the database
 npm run prisma:seed
 
-# 7. Start development server
+# 5. Start development server
 npm run dev
 ```
 
 Server will start at http://localhost:3000
 
-## API Documentation
+### Production Installation
 
-Once running, visit:
-- Swagger UI: http://localhost:3000/docs
+For production deployments, install only production dependencies:
+
+```bash
+# Install production dependencies only (faster, smaller)
+npm install --omit=dev
+
+# Generate Prisma Client
+npx prisma generate
+
+# Run migrations
+npx prisma migrate deploy
+```
+
+## API Endpoints
+
+Once running, you can access:
 - Health Check: http://localhost:3000/health
+- Auth endpoints: http://localhost:3000/api/v1/auth/*
+- Resources endpoints: http://localhost:3000/api/v1/resources/*
+- Admin endpoints: http://localhost:3000/api/v1/admin/*
 
 ## Available Scripts
 

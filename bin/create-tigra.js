@@ -80,7 +80,6 @@ const filesToProcess = [
     'CLAUDE.md',
     // Server files
     'server/package.json',
-    'server/.env',
     'server/.env.example',
     'server/docker-compose.yml',
     'server/README.md',
@@ -100,6 +99,11 @@ const excludePatterns = [
     'coverage',
     'build-errors.txt',
     '.env.local',
+    '.env',
+    '*.tsbuildinfo',
+    'tsconfig.build.tsbuildinfo',
+    '.DS_Store',
+    'Thumbs.db',
 ];
 
 // ==============================================
@@ -278,7 +282,7 @@ program
             console.log();
             console.log(chalk.gray('  URLs after starting:'));
             console.log(chalk.gray('    API Server:  http://localhost:3000'));
-            console.log(chalk.gray('    API Docs:    http://localhost:3000/docs'));
+            console.log(chalk.gray('    Health Check: http://localhost:3000/health'));
             console.log(chalk.gray('    phpMyAdmin:  http://localhost:8080 (root / password)'));
             console.log(chalk.gray('    Redis UI:    http://localhost:8081'));
             console.log();

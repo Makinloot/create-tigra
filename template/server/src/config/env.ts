@@ -54,13 +54,6 @@ const envSchema = z.object({
     RATE_LIMIT_MAX: z.coerce.number().int().positive().default(100),
     RATE_LIMIT_WINDOW: z.coerce.number().int().positive().default(900000), // 15 minutes
 
-    // API Documentation Configuration
-    SWAGGER_ENABLED: z
-        .string()
-        .transform((val) => val === 'true')
-        .default('true'),
-    SWAGGER_ROUTE: z.string().default('/docs'),
-
     // Development Tools
     PRISMA_QUERY_LOG: z
         .string()

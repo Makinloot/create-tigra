@@ -5,9 +5,9 @@
  * This script polls the database connection until it's available
  */
 
-const { createConnection } = require('mysql2/promise');
-const { config } = require('dotenv');
-const { resolve } = require('path');
+import { createConnection } from 'mysql2/promise';
+import { config } from 'dotenv';
+import { resolve } from 'path';
 
 // Load environment variables
 config({ path: resolve(process.cwd(), '.env') });

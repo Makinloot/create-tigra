@@ -1,0 +1,32 @@
+# Development files
+.git
+.gitignore
+.claude
+node_modules
+*.log
+
+# Documentation (keep only main README)
+docs/
+
+# Build artifacts
+*.tsbuildinfo
+dist/
+build/
+
+# OS files
+.DS_Store
+Thumbs.db
+*.swp
+
+# IDE
+.vscode/
+.idea/
+
+# Testing
+coverage/
+*.test.js
+*.spec.js
+
+# Other
+.env
+.env.*
