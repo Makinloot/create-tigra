@@ -160,7 +160,7 @@ The project includes built-in web interfaces for managing your data:
 
 This project follows security best practices and undergoes regular security audits.
 
-**Security Status**: ✅ Production dependencies 100% secure
+**Security Status**: Production dependencies 100% secure
 
 For detailed information about:
 - Known security considerations

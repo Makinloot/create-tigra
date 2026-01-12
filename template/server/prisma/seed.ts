@@ -110,10 +110,10 @@ async function main() {
 
     // Summary
     console.log('');
-    console.log('✅ Database seeded successfully!');
+    console.log('Database seeded successfully!');
     console.log('');
     console.log('═══════════════════════════════════════════════════════════');
-    console.log('🔐 LOGIN CREDENTIALS (Save these!)');
+    console.log('LOGIN CREDENTIALS (Save these!)');
     console.log('═══════════════════════════════════════════════════════════');
     console.log('');
     console.log('ADMIN:');

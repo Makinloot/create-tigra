@@ -24,7 +24,7 @@ async function waitForDatabase() {
     database: process.env.DB_NAME,
   };
 
-  console.log('⏳ Waiting for database to be ready...');
+  console.log('Waiting for database to be ready...');
   console.log(`   Host: ${dbConfig.host}:${dbConfig.port}`);
   console.log(`   Database: ${dbConfig.database}`);
   console.log();
@@ -35,15 +35,15 @@ async function waitForDatabase() {
       await connection.ping();
       await connection.end();
 
-      console.log('✅ Database is ready!');
+      console.log('Database is ready!');
       console.log();
       process.exit(0);
     } catch (error) {
       if (attempt === MAX_ATTEMPTS) {
-        console.error('❌ Database failed to become ready after maximum attempts');
+        console.error('Database failed to become ready after maximum attempts');
         console.error(`   Error: ${error.message}`);
         console.error();
-        console.error('💡 Troubleshooting:');
+        console.error('Troubleshooting:');
         console.error('   1. Ensure Docker is running: docker ps');
         console.error('   2. Check if containers are healthy: docker-compose ps');
         console.error('   3. View MySQL logs: docker-compose logs mysql');
@@ -51,7 +51,7 @@ async function waitForDatabase() {
         process.exit(1);
       }
 
-      process.stdout.write(`   Attempt ${attempt}/${MAX_ATTEMPTS} - Database not ready yet, retrying in ${RETRY_DELAY/1000}s...\r`);
+      process.stdout.write(`   Attempt ${attempt}/${MAX_ATTEMPTS} - Database not ready yet, retrying in ${RETRY_DELAY / 1000}s...\r`);
       await new Promise(resolve => setTimeout(resolve, RETRY_DELAY));
     }
   }
