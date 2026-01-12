@@ -1,0 +1,12 @@
+{
+  "verbose": false,
+  "resolveFullPaths": true,
+  "replacers": {
+    "before": [],
+    "after": []
+  },
+  "fileExtensions": {
+    "inputGlob": "**/*.js",
+    "outputCheck": ["js"]
+  }
+}

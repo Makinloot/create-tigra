@@ -1,0 +1,34 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+
+# Test output
+coverage/
+
+# Logs
+*.log
+npm-debug.log*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Lock files (regenerated on install)
+package-lock.json
+pnpm-lock.yaml
+yarn.lock
+
+# Template excluded files (should not be in published package)
+template/server/node_modules/
+template/server/dist/
+template/server/coverage/
+template/server/package-lock.json
+template/server/build-errors.txt

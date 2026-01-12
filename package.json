@@ -1,0 +1,41 @@
+{
+  "name": "create-tigra",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Create a production-ready Fastify + TypeScript + Prisma API server",
+  "keywords": [
+    "create",
+    "generator",
+    "scaffold",
+    "fastify",
+    "typescript",
+    "prisma",
+    "api",
+    "rest",
+    "boilerplate",
+    "starter"
+  ],
+  "author": "",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "bin": {
+    "create-tigra": "./bin/create-tigra.js"
+  },
+  "files": [
+    "bin",
+    "template"
+  ],
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "chalk": "^5.3.0",
+    "commander": "^12.1.0",
+    "fs-extra": "^11.2.0",
+    "ora": "^8.0.1",
+    "prompts": "^2.4.2"
+  }
+}
