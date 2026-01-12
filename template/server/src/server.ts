@@ -8,7 +8,7 @@
  */
 
 import 'dotenv/config';
-import buildApp from './app';
+import buildApp from './app.js';
 import { env } from '@/config/env';
 import logger from '@/libs/logger';
 import { prisma } from '@/libs/db';

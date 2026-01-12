@@ -1,6 +1,6 @@
 {
   "name": "create-tigra",
-  "version": "1.0.5",
+  "version": "1.0.7",
   "type": "module",
   "description": "Create a production-ready Fastify + TypeScript + Prisma API server",
   "keywords": [
