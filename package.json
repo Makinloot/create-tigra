@@ -19,10 +19,10 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "git+https://github.com/Makinloot/create-tigra.git"
   },
   "bin": {
-    "create-tigra": "./bin/create-tigra.js"
+    "create-tigra": "bin/create-tigra.js"
   },
   "files": [
     "bin",
