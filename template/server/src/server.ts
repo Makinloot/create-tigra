@@ -46,10 +46,7 @@ async function startServer() {
 
         logger.info(`Server started in ${env.NODE_ENV} mode`);
         logger.info(`API is listening at: ${serverUrl}${env.API_PREFIX}`);
-
-        if (env.SWAGGER_ENABLED) {
-            logger.info(`Swagger docs available at: ${serverUrl}${env.SWAGGER_ROUTE}`);
-        }
+        logger.info(`Health check available at: ${serverUrl}/health`);
 
         /**
          * Graceful Shutdown Handler

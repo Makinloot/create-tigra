@@ -1,7 +1,7 @@
 /**
  * Resources Schemas
  * 
- * Zod schemas for request validation and Swagger documentation.
+ * Zod schemas for request validation and type validation.
  * Ensures type safety and API documentation consistency.
  */
 
@@ -107,7 +107,7 @@ export const PaginationSchema = z.object({
 });
 
 /**
- * Resource Response Schema (for Swagger documentation)
+ * Resource Response Schema (for type validation)
  * 
  * Defines the structure of resource objects in API responses.
  */
@@ -123,7 +123,7 @@ export const ResourceResponseSchema = z.object({
 });
 
 /**
- * Resource with Owner Response Schema (for Swagger documentation)
+ * Resource with Owner Response Schema (for type validation)
  */
 export const ResourceWithOwnerResponseSchema = ResourceResponseSchema.extend({
     owner: z.object({

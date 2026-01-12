@@ -46,8 +46,8 @@ vi.mock('@/libs/logger', () => ({
 
 /**
  * Integration tests are skipped because they require full Fastify app initialization
- * with all plugins (swagger, rate-limit, etc.) which need complex mocking.
- * 
+ * with all plugins (rate-limit, etc.) which need complex mocking.
+ *
  * For proper integration testing, use a test database and real dependencies.
  * Unit tests (auth.service.test.ts, rbac.middleware.test.ts) provide adequate coverage.
  */

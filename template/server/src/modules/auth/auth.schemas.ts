@@ -1,8 +1,8 @@
 /**
  * Authentication Schemas
- * 
- * Zod schemas for request validation and Swagger documentation.
- * These schemas ensure type safety and API documentation consistency.
+ *
+ * Zod schemas for request validation.
+ * These schemas ensure type safety and runtime validation.
  */
 
 import { z } from 'zod';
@@ -71,7 +71,7 @@ export const RefreshTokenSchema = z.object({
 });
 
 /**
- * User Response Schema (for Swagger documentation)
+ * User Response Schema (for type validation)
  * 
  * Defines the structure of user objects in API responses.
  */
@@ -86,7 +86,7 @@ export const UserResponseSchema = z.object({
 });
 
 /**
- * Token Response Schema (for Swagger documentation)
+ * Token Response Schema (for type validation)
  * 
  * Defines the structure of token objects in API responses.
  */
@@ -97,7 +97,7 @@ export const TokenResponseSchema = z.object({
 });
 
 /**
- * Auth Response Schema (for Swagger documentation)
+ * Auth Response Schema (for type validation)
  * 
  * Complete authentication response structure.
  * Used for login and register endpoints.
@@ -112,7 +112,7 @@ export const AuthResponseSchema = z.object({
 });
 
 /**
- * Error Response Schema (for Swagger documentation)
+ * Error Response Schema (for type validation)
  * 
  * Standard error response structure.
  */
